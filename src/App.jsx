@@ -1,67 +1,25 @@
-import { useState } from "react"
+// import { useState, useEffect } from "react"
 
 function App() {
+  // const [showTimer, setShowTimer] = useState(true);
 
-  return (
-    <div style={{ background: "#dfe6e9", height: "100vh" }}>
-      <ToggleMessage />
-    </div>
-  )
+  return <div style={{display: "flex"}}>
+    <Card>
+      {<div style={{color: "green"}}>
+        What's up <br/> <br/>
+        <input type={"text"} />
+      </div>}
+    </Card>
+    <Card>
+      Heyyy!!!
+    </Card>
+  </div>
 }
 
-const ToggleMessage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  return (
-    <div>
-      <button onClick={() => setIsVisible(!isVisible)}>
-        Toggle Message
-      </button>
-      {isVisible && <p>This message is conditionally rendered</p>}
-    </div>
-  )
+function Card( {children} ) {
+  return <div style={{background: "black", borderRadius: 10, color: "white", padding: 10, margin: 10}}>
+    {children}
+  </div>
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const style = { width: 200, backgroundColor: "white", borderRadius: 10, borderColor: "gray", borderWidth: 1, padding: 20 }
-
-// function PostComponent() {
-//   return <div style={style}> 
-//     <div style={{display: "flex"}}>
-//       <img src={"https://media.licdn.com/dms/image/v2/D5622AQEX9jHPyZTzRg/feedshare-shrink_1280/feedshare-shrink_1280/0/1726419400449?e=1738800000&v=beta&t=8zr5NFTOYCSTl-ezonjsHUqGDjq58YGbdEbn3b6ricY"} style={{
-//         width: 20,
-//         height: 20,
-//         borderRadius: 20
-//       }} />
-//       <div style={{frontSize: 10, marginLeft: 10}}>
-//         <b>
-//           Ishan Verma
-//         </b>
-//         <div>990 followers</div>
-//         <div>3min</div>
-//       </div>
-//     </div>
-//     <div style={{frontSize: 12}}>
-//     Heyyyy guys, My name is ishan and i am currently working on MERN stack projects
-//     </div>
-//   </div>
-// }
-
-// write the assignment
-// make the profileCard Component function
-// function ProfileCard() {
-//   return <div></div>
-// }
 
 export default App
